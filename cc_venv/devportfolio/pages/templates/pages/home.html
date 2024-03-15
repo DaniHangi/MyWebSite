@@ -1,0 +1,27 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+
+
+
+
+{% block 'content' %}
+
+    <section class="header">
+        <div class="text-box">
+            <h1>WEB DEVELOPER</h1>
+            <p>Actuellement creer des Sites Web est devenu facile. Il suffit juste de connaitre les langages HTML, <br>CSS et JavaScript. Si tu veux savoir comment on le fait,<br> venez a UCBC</p>
+        </div>
+    </section>
+
+
+    <section class="cta">
+        <h1><br>My Curicculum Vitae In PDF Format</h1>
+        <a href="{% url 'contact' %}" class="hero-btn">Download My CV</a>
+    </section>
+
+{% endblock %}
+
+
+ 
