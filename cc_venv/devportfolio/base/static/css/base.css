@@ -117,6 +117,10 @@ nav img{
     color: rgb(3, 3, 3);
 }
 
+.text-box strong{
+    color: green;
+}
+
 .hero-btn{
     display: inline-block;
     text-decoration: none;
@@ -226,7 +230,7 @@ p{
 .course-col{
     flex-basis: 31%;
     background: #665353;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
@@ -310,7 +314,7 @@ h3{
 }
 
 
-.icons .fa-brands{
+.icons .fa{
     color: #f44336;
     margin: 0 13px;
     padding: 18px 0;
@@ -318,6 +322,9 @@ h3{
 }
 
 
+.fa-heart-o{
+    color: #f44336;
+}
 
 
 /*----------About me----------*/
@@ -427,11 +434,7 @@ h3{
     box-sizing: border-box;
 }
 
-.contact-col form{
-    
-    background-color: white;
-    color: red;
-}
+
 
 
 
@@ -454,12 +457,18 @@ h3{
 
 
 
+.contact-content{
+    width: 100%;
+    /* background-color: aqua; */
+}
 
 
-
-.contact-left{
+.contact-content .contact-left{
+    width: 100%;
     flex-basis: 65%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -474,6 +483,7 @@ h3{
 .contact-left{
     color: #999;
     padding: 0px;
+    margin-left: 0px;
  
     
 }
@@ -481,17 +491,20 @@ h3{
 .contact-box{
     
     border: 1px solid #ccc;
-    margin-left: 25%;
     margin-top: 10%;
     margin-bottom: 5%;
     padding: 10px 20px;
     background-color: black;
+    text-align: left;
+    width: 75%;
+    /* height: ; */
    
 }
 
 .contact-box h3{
     text-align: left;
     color: white;
+
 
 }
 
@@ -512,7 +525,7 @@ h3{
 
 
 .contact-form button{
-    margin: 10px 0;
+    margin: 40px 0;
 }
 
 @media(max-width: 700px){
@@ -521,6 +534,42 @@ h3{
 
     }
 }
+
+
+
+
+.contact-title{
+    align-items: center;
+}
+
+
+
+.course-col .class-pdf{
+    width: 70ox;
+    height: 25px;
+    background-color: green;
+}
+
+.course-col .class-pdf a{
+    color: white;
+}
+
+.img-div{
+    text-align: center;
+}
+
+
+.img-div img{
+    width: 10%;
+    height: 200px;
+}
+
+
+
+/* ---------------devcolaborators-------------- */
+
+
+
 
 
 

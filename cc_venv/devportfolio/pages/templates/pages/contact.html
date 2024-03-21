@@ -9,14 +9,32 @@
     </section> -->
     
     <section class="contact-content">
+        <!-- <h1>CONTACT ME</h1> -->
         <div class="contact-left">
             <div class="contact-box">
-                <h3>MAIL ME!</h3>
+                <h3>CONTACT</h3>
+                <hr>
+                <br>
+                <br>
                 <form class="contact-form">
-                    <input type="text" placeholder="Enter Name">
-                    <input type="email" placeholder="Enter Email">
-                    <textarea rows="5"  placeholder="Your Comment"></textarea>
-                    <button type="submit" class="hero-btn red-btn">CONTACT ME</button>
+                    <label for="fullname">Full_Name</label>
+                    <br>
+                    <input type="text" placeholder="Enter Name" name="fullname" id="fullname" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                    <br>
+                    
+                    <label for="phone">Phone_Number</label>
+                    <br>
+                    <input rows="10"  placeholder="Enter Phone Number" name="phone" id="phone" required>
+                    <br>
+                    <label for="textarea">Message</label>
+                    <br>
+                    <textarea rows="10"  placeholder="Your message here" name="textarea" id="textarea"></textarea>
+                    <br>
+                    <button type="submit" class="hero-btn red-btn">Submit</button>
                 </form>
             </div>
         </div>       

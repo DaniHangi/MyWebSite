@@ -1,7 +1,13 @@
 from django.shortcuts import render
 
+from base.models import Developer
+
+
 
 def home(request):
+
+    
+
     return render(request, 'pages/home.html')
 
 
@@ -15,3 +21,12 @@ def services(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+def devcolaborators(request):
+    developeur = Developer.objects.all()
+    data = {
+
+        'devs': developeur
+    }
+    return render(request, 'pages/devcolabs.html', data)
+

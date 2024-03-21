@@ -2,18 +2,47 @@
 {% load static %}
 
 
-
-
-
-
 {% block 'content' %}
 
     <section class="header">
+        
+
         <div class="text-box">
-            <h1>WEB DEVELOPER</h1>
-            <p>Actuellement creer des Sites Web est devenu facile. Il suffit juste de connaitre les langages HTML, <br>CSS et JavaScript. Si tu veux savoir comment on le fait,<br> venez a UCBC</p>
+            <h1>KARIBU! WELCOME! BIENVENU!</h1>
+            <hr>
+            
         </div>
+        
+            
+        
     </section>
+    <section class="div-image-developer">
+        <div class="img-div"><img src="{% static 'pages/img/daniLab.jpg' %} " alt=""></div>
+    </section>
+     
+
+     <section class="header">
+        
+
+        <div class="text-box">
+           
+                {% for dev in devs %}
+                    <p><em>{{ dev.name }}</em></p>
+                {% endfor %}
+            
+            
+            <p><strong>Dani Hangi</strong><br>Student in Computer Engineering department and Teacher Assistant in L0 FTSI. <br> Currently learning computer engineering at Christian Bilingual University Of Congo in Beni Town, DRC. <br><br> <a href="#">Learn more about my studies at UCBC.</a></p>
+        </div>
+            
+        
+    </section>
+    
+
+
+   
+
+
+
 
 
     <section class="cta">
