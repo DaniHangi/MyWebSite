@@ -53,12 +53,12 @@ def developer_add(request):
 
 
 def developer_edit(request, developer_id):
-    developer = get_object_or_404(Developer, pk=developer_id)
+    developer = get_object_or_404(Developer, developer_id=developer_id)
     if request.method == 'POST':
         form = DeveloperForm(request.POST, instance=developer)  # Pre-populate form with existing data
         if form.is_valid():
             form.save()
-            return redirect('developer_detail', developer.pk)  # Redirect to detail page after update
+            return redirect('developer_detail', developer.developer_id)  # Redirect to detail page after update
     else:
         form = DeveloperForm(instance=developer)  # Create form with existing data
     context = {'form': form, 'developer': developer}
