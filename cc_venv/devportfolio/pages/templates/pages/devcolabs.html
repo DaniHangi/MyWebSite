@@ -12,35 +12,50 @@
     <div>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
     </div>
-    <br>
-    <br>
+    
 
 
 
 
     <section class="course">
+
+    <!-- {%for dev in devs%}
         
-    
-        {% for dev in devs %}
-            <p><strong>{{ dev.name }}</strong></p>
-        {% endfor %}
+        <p><strong>{{ dev.name }}</strong></p>
+
+    {%endfor%} -->
+
+
+
+        <h1>{{ developer.name }}</h1>
+        <br>
+        <br>
+        <p><strong>Biography: </strong>{{ developer.biography }}</p>
+        {% if developer.profile_picture_url %}
+            <img src="{{ developer.profile_picture_url }}" alt="Profile Picture">
+        {% endif %}
+        <br>
+        <p><strong>Email: </strong>{{ developer.email }}</p>
+        <br>
+        <p><strong>Phone Number: </strong>{{ developer.phone_number }}</p>
+        <br>
+        <p><strong>Website: </strong><a href="{{ developer.website_url }}">{{ developer.website_url }}</a></p>
+        <br>
+        <br>
         
+
+        <a href="{% url 'developer_list' %}"">Back to Developer List</a>
+        <br>
+        <a href="{% url 'add_dev' %}" >Add</a>
+        <br>
+        <a href="{% url 'devdedit' developer.developer_id %}">Edit</a>
+        <br>
+        <a href="{% url 'devdelet' developer.developer_id %}">Delete</a>
+      
+            
     </section>
     <br>
-    <br>
-
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
-    </div>
+    
 
 {% endblock %}
 

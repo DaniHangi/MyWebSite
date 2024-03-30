@@ -1,0 +1,51 @@
+{% extends 'base-template.html' %}
+{% load static %}
+
+
+
+
+
+
+{% block 'content' %}
+
+
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus non itaque hic in necessitatibus dignissimos ex vero dolor! Iusto voluptatem eum illum asperiores voluptates non corporis distinctio sequi. Aliquid, eius. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum voluptatem facilis accusantium et ratione. Fugit nemo et quod porro neque laudantium deleniti, expedita fugiat provident cum assumenda? Voluptate, blanditiis ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestias autem eaque id magnam modi fuga vel, est reiciendis quisquam atque esse distinctio doloribus similique blanditiis inventore repellendus? Et, ea?</p>
+    </div>
+    
+
+
+
+
+    <section class="course">
+
+    {%for dev in devs%}
+        
+        <p><strong>{{ dev.name }}</strong></p>
+
+    {%endfor%}
+
+            
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p ><a href="{% url 'services' %}" class="to-services">To devcolabs</a></p>
+    
+
+{% endblock %}
+
+
+
+
+
+
+ 

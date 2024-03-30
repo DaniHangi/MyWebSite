@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Developer</title>
+</head>
+<body>
+  <h1>Add Developer</h1>
+  <form href= "{% url 'add_dev' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    <!-- {{ form.as_p }} -->
+    <button type="submit">Create Developer</button>
+  </form>
+
+  <a href="{% url 'developer_list' %}">Back to Developer List</a>
+</body>
+</html>

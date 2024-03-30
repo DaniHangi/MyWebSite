@@ -26,9 +26,7 @@
 
         <div class="text-box">
            
-                {% for dev in devs %}
-                    <p><em>{{ dev.name }}</em></p>
-                {% endfor %}
+                
             
             
             <p><strong>Dani Hangi</strong><br>Student in Computer Engineering department and Teacher Assistant in L0 FTSI. <br> Currently learning computer engineering at Christian Bilingual University Of Congo in Beni Town, DRC. <br><br> <a href="#">Learn more about my studies at UCBC.</a></p>
@@ -38,16 +36,10 @@
     </section>
     
 
-
-   
-
-
-
-
-
     <section class="cta">
         <h1><br>My Curicculum Vitae In PDF Format</h1>
-        <a href="{% url 'contact' %}" class="hero-btn">Download My CV</a>
+        <!-- <a href="{% url 'contact' %}" class="hero-btn">Download My CV</a> -->
+        <a href="{% static 'pages/img/Monfichier.pdf' %} " download>Download My CV</a>
     </section>
 
 {% endblock %}

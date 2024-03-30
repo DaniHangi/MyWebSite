@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'devportfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : 'dani_portfolio_db',
+        'NAME' : 'dani_portfolio',
         'USER' : 'cc_admin',
         'PASSWORD': DATABASE_PASSWORD,
         'HOST' : 'localhost',
-        'PORT' : '3306',
+        'PORT' : '3307',
     }
 }
 

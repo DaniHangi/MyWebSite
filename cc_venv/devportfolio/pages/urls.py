@@ -12,6 +12,12 @@ urlpatterns = [
     path('about-me/', views.about, name='about'),
     path('my-services/', views.services, name='services'),
     path('my-contact/', views.contact, name='contact'),
-     path('my-colabs/', views.devcolaborators, name='devcolabs'),
+    path('my-colabs/<int:developer_id>/', views.developer_detail, name='devcolabs'),
+    path('my-list/', views.devcolaborators,name='developer_list'),
+    path('my-add/', views.developer_add, name='add_dev'),
+    path('my-deleted_dev/<int:developer_id>/', views.developer_delete, name='devdelet'),
+    path('my-edit_dev/<int:developer_id>/', views.developer_edit, name='devdedit'),
+
+
    
 ]
