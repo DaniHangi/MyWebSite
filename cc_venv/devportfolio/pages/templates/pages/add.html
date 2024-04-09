@@ -5,11 +5,9 @@
 </head>
 <body>
   <h1>Add Developer</h1>
-  <form href= "{% url 'add_dev' %}" method="post">
+  <form href= "{% url 'add_dev' %}" method="POST">
     {% csrf_token %}
-    {{ form }}
-
-    <!-- {{ form.as_p }} -->
+    {{ form.as_p }}
     <button type="submit">Create Developer</button>
   </form>
 

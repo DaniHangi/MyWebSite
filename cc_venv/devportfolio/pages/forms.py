@@ -1,5 +1,5 @@
 from django import forms
-from .models import Developer
+from base.models import Developer
 
 class DeveloperForm(forms.ModelForm):
   class Meta:

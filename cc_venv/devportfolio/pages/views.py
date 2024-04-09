@@ -33,21 +33,27 @@ def devcolaborators(request):
 
 
 def developer_detail(request, developer_id):
-  developer = get_object_or_404(Developer, developer_id=developer_id)
-  context = {'developer': developer}
-  return render(request, 'pages/devcolabs.html', context)
+    developer = get_object_or_404(Developer, developer_id=developer_id)
+    context = {'developer': developer}
+    return render(request, 'pages/devcolabs.html', context)
+
+
+
 
 
 def developer_add(request):
-  if request.method == 'POST':
-    form = DeveloperForm(request.POST)
-    if form.is_valid():
-      form.save()
-      return redirect('developer_list')  # Redirect to list after creation
-  else:
-    form = DeveloperForm()
-  context = {'form': form}
-  return render(request, 'pages/add.html', context)
+    
+    submitted = False
+    if request.method == 'POST':
+        form = DeveloperForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('developer_list')
+    else:
+        form = DeveloperForm()
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(request, 'pages/add.html', {'form': form})
 
 
 
@@ -61,7 +67,7 @@ def developer_edit(request, developer_id):
             return redirect('developer_detail', developer.developer_id)  # Redirect to detail page after update
     else:
         form = DeveloperForm(instance=developer)  # Create form with existing data
-    context = {'form': form, 'developer': developer}
+        context = {'form': form, 'developer': developer}
     return render(request, 'pages/edit.html', context)
 
 
