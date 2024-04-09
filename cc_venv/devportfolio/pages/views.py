@@ -1,4 +1,5 @@
 # from django.http import Http404
+from audioop import reverse
 from django.shortcuts import get_object_or_404, redirect, render
 
 from base.models import Developer
@@ -64,11 +65,11 @@ def developer_edit(request, developer_id):
         form = DeveloperForm(request.POST, instance=developer)  # Pre-populate form with existing data
         if form.is_valid():
             form.save()
-            return redirect('developer_detail', developer.developer_id)  # Redirect to detail page after update
+            return redirect('developer_list')  # Redirect to list page after update
     else:
         form = DeveloperForm(instance=developer)  # Create form with existing data
-        context = {'form': form, 'developer': developer}
-    return render(request, 'pages/edit.html', context)
+
+    return render(request, 'pages/edit.html', {'form': form})
 
 
 
@@ -81,8 +82,7 @@ def developer_delete(request, developer_id):
         return redirect('developer_list')  # Redirect to list view after deletion
     else:
         developer = get_object_or_404(Developer, developer_id=developer_id)
-        context = {'developer': developer}
-        return render(request, 'pages/list_devs.html', context)
+        return render(request, 'pages/list_devs.html', {'developer': developer})
     
 
 
