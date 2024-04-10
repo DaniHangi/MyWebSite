@@ -68,7 +68,6 @@ def developer_edit(request, developer_id):
             return redirect('developer_list')  # Redirect to list page after update
     else:
         form = DeveloperForm(instance=developer)  # Create form with existing data
-
     return render(request, 'pages/edit.html', {'form': form})
 
 
@@ -80,9 +79,7 @@ def developer_delete(request, developer_id):
         developer = get_object_or_404(Developer, developer_id=developer_id)
         developer.delete()
         return redirect('developer_list')  # Redirect to list view after deletion
-    else:
-        developer = get_object_or_404(Developer, developer_id=developer_id)
-        return render(request, 'pages/list_devs.html', {'developer': developer})
+    return render(request, 'pages/list_devs.html', {'developer': developer})
     
 
 
